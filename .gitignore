@@ -1,0 +1,9 @@
+_site/
+.sass-cache/
+.DS_Store
+*~
+npm-debug.log
+.jekyll-metadata
+node_modules/
+Gemfile.lock
+public/
