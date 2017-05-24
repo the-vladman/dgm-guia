@@ -34,7 +34,7 @@ p.small                                     { font-size: 11px; }
 .tool-iframe                                { width: 100%; height: 650px; overflow: hidden; border: none; }
 .scrolloff                                  { pointer-events: none; }
 .bg-container                               { position: relative; }
-.bg-container .bg                           { background-color: #474747; position: absolute; left: 0; top: 0; bottom: 0; right: 75.9%; }
+.bg-container .bg                           { background-color: #474747; position: absolute; left: 0; top: 0; bottom: 0; right: 90%; }
 
 /*********************************
     SHARE STYLES
