@@ -1,8 +1,8 @@
 # Site settings
 title: Guía de Datos Abiertos para México
 email: hola@datos.gob.mx
-baseurl: ""
-url: "http://localhost:4000/"
+baseurl: "/guia/"
+url: "http://localhost:4000/guia"
 twitter_username: jekyllrb
 github_username:  mxabierto
 
