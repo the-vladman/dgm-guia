@@ -35,7 +35,7 @@ WORKDIR /usr/share/guia
 # Intalacion de gemas
 RUN gem install bundler
 RUN bundle install
-RUN jekyll build --destination /usr/share/nginx/html/guia
+RUN jekyll build --config _config.yml --destination /usr/share/nginx/html/guia
 
 EXPOSE 80 443
 
