@@ -28,6 +28,19 @@ RUN tar -xzf ruby-2.1.2.tar.gz
 WORKDIR ./ruby-2.1.2/
 RUN ./configure && make && make install
 
+# Install Node.js
+RUN apt-get update && \
+	apt-get install -y git-core curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN apt-get install -y nodejs
+
+RUN apt-get clean;
+
+# Actualiza el bower_components
+RUN rm -rf bower_components
+RUN npm install -g bower
+RUN bower --allow-root install
+
 # cache bundler
 COPY . /usr/share/guia
 WORKDIR /usr/share/guia
