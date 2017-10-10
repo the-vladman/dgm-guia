@@ -78,10 +78,10 @@ p.small                                     { font-size: 11px; }
     BREADCRUMB STYLES
 *********************************/
 .breadcrumb                                 { height: 40px; margin: 0; padding: 0; background-color: transparent; }
-.breadcrumb a                               { font-size: 12px; position: relative; }
+.breadcrumb a                               { font-size: 12px; position: relative; top: -14px; }
 .breadcrumb a span                          { text-transform: capitalize; }
-.breadcrumb .home-item                      { display: inline-block; height: 100%; top: 0; }
-/*.breadcrumb .home-item                      { display: inline-block; width: 15px; height: 100%; margin-right: 5px; background: url(../assets/img/ic-home.png) no-repeat 50% 50%; background-size: contain; top: 0; }*/
+/* .breadcrumb .home-item                      { display: inline-block; height: 100%; top: 0; } */
+.breadcrumb .home-item                      { display: inline-block; width: 15px; height: 100%; margin-right: 5px; background: url(../assets/img/ic-home.png) no-repeat 50% 50%; background-size: contain; top: 0; }
 
 /*********************************
     FONTS STYLES
@@ -136,7 +136,7 @@ a.load-more:hover                           { font-weight: 600; }
 /*********************************
     TABS STYLES
 *********************************/
-header                                      { padding-top: 20px; }
+header                                      { padding-top: 11px; }
 header .nav-tabs                            { margin-bottom: 0; border: none; }
 header .nav-tabs > li                       { margin-bottom: 0; margin-right: 0; border-bottom: 5px solid #474747; }
 header .nav-tabs > li.active,

@@ -1,5 +1,6 @@
 <div class="breadcrumb">
-    <a href="{{ site.url | append : site.baseurl }}" class="home-item">Guia</a>
+    <a href="{{ site.url }}" class="home-item"></a>
+    <a href="{{ site.baseurl }}/">/ <span>{{ site.baseurl | replace: '/', ' ' }}</span></a>
     {% capture full_url %}{{ page.url | remove: '/index.html' | replace: '/', ' ' }}{% endcapture %}
     {% capture section %}{{ full_url | truncatewords: 1 | remove: '...' }}{% endcapture %}
     {% if section %}
