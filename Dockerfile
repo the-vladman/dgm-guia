@@ -28,6 +28,14 @@ RUN tar -xzf ruby-2.1.2.tar.gz
 WORKDIR ./ruby-2.1.2/
 RUN ./configure && make && make install
 
+# Install Node.js
+RUN apt-get update && \
+	apt-get install -y git-core curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+RUN apt-get install -y nodejs
+
+RUN apt-get clean;
+
 # cache bundler
 COPY . /usr/share/guia
 WORKDIR /usr/share/guia
@@ -35,6 +43,12 @@ WORKDIR /usr/share/guia
 # Intalacion de gemas
 RUN gem install bundler
 RUN bundle install
+
+# Actualiza el bower_components
+RUN rm -rf bower_components
+RUN npm install -g bower
+RUN bower --allow-root install
+
 RUN jekyll build --config _config.yml --destination /usr/share/nginx/html/guia
 
 EXPOSE 80 443
