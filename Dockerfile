@@ -49,7 +49,11 @@ RUN rm -rf bower_components
 RUN npm install -g bower
 RUN bower --allow-root install
 
+# Contruye la app
 RUN jekyll build --config _config.yml --destination /usr/share/nginx/html/guia
+
+#Borra el la carpeta del proyecto
+RUN rm -r /usr/share/guia
 
 EXPOSE 80 443
 
