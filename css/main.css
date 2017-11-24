@@ -77,11 +77,11 @@ p.small                                     { font-size: 11px; }
 /*********************************
     BREADCRUMB STYLES
 *********************************/
-.breadcrumb                                 { height: 40px; margin: 0; padding: 0; background-color: transparent; }
+.breadcrumb                                 { height: auto; line-height: 1.3; margin: 0; padding: 0; background-color: transparent; }
 .breadcrumb a                               { font-size: 12px; position: relative; top: -14px; }
 .breadcrumb a span                          { text-transform: capitalize; }
 /* .breadcrumb .home-item                      { display: inline-block; height: 100%; top: 0; } */
-.breadcrumb .home-item                      { display: inline-block; width: 15px; height: 100%; margin-right: 5px; background: url(../assets/img/ic-home.png) no-repeat 50% 50%; background-size: contain; top: 0; }
+.breadcrumb .home-item                      { display: inline-block; width: 15px; height: 40px; margin-right: 5px; background: url(../assets/img/ic-home.png) no-repeat 50% 50%; background-size: contain; top: 0; }
 
 /*********************************
     FONTS STYLES
@@ -511,8 +511,8 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 .section-navigation                         { margin-top: 40px; margin-bottom: 0; overflow: hidden; list-style: none; }
 .section-navigation li                      { float: left; }
 .section-navigation.cols-3 li               { width: 33.3333%; }
-.section-navigation.cols-4 li               { width: 25%; height: 45px; }
-.section-navigation li a                    { display: block; height: 48px; margin: 0 10px; padding-bottom: 10px; font-size: 10px; text-transform: uppercase; color: #595959; border-bottom: 3px solid #595959; }
+.section-navigation.cols-4 li               { width: 25%; height: auto; }
+.section-navigation li a                    { display: block; margin: 0 10px; padding-bottom: 10px; font-size: 10px; text-transform: uppercase; color: #595959; border-bottom: 3px solid #595959; }
 .section-navigation.cols-4 li a             { padding-bottom: 0; position: relative; bottom: 3px; }
 .section-navigation li:first-child a        { margin-left: 0; }
 .section-navigation li:last-child a         { margin-right: 0; }
@@ -522,6 +522,15 @@ p.cover-image                               { margin-top: 30px; text-align: cent
 .section-navigation li .highlight           { font-weight: bold; text-transform: none; }
 .section-navigation li:hover .highlight,
 .section-navigation li.active .highlight    { color: #0c9; }
+@media (max-width: 695px) {
+    .section-navigation li a { height: auto; }
+}
+@media (min-width: 696px) and (max-width: 909px) {
+    .section-navigation li a { height: 80px; }
+}
+@media (min-width: 910px) {
+    .section-navigation li a { height: 63px; }
+}
 .section-content                            { padding: 40px; background-color: #f6f6f6; }
 .section-content.intro                      { background-color: transparent; }
 .section-content table                      { width: 100%; margin-bottom: 20px; }
